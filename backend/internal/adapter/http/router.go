@@ -26,9 +26,9 @@ func NewRouter(router Router) *gin.Engine {
 	api := r.Group("/api")
 	{
 		api.GET("/users", router.UserHandler.GatAll)
-		api.GET("/user/:id", router.UserHandler.GetByID)
-		api.POST("/user", router.UserHandler.Create)
-		api.POST("/user/:id", router.UserHandler.Update)
+		api.GET("/users/:id", router.UserHandler.GetByID)
+		api.POST("/users", router.UserHandler.Create)
+		api.POST("/users/:id", router.UserHandler.Update)
 	}
 	return r
 }
