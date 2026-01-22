@@ -15,6 +15,17 @@ services:
         condition: service_healthy
     restart: always
 
+  # frontend:
+  #   build:
+  #     context: ./frontend
+  #     dockerfile: Dockerfile
+  #   container_name: angular-frontend
+  #   ports:
+  #     - "4200:80"
+  #   depends_on:
+  #     - backend
+  #   restart: always
+
   postgres:
     image: postgres:16
     container_name: postgres

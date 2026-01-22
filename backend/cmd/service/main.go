@@ -25,6 +25,7 @@ func main() {
 	r := http.NewRouter(http.Router{
 		UserHandler: userHandler,
 	})
+
 	r.Run(":" + port)
 
 }
